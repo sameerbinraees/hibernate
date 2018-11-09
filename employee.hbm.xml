@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?> 
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping> 
+     <class name="Person" table="person"> 
+	<id name="id" type="int" column="id"> 
+		<generator class="assigned"></generator> 
+	</id> 
+	<property name="name" column="name" type="string"></property> 
+	<property name="fatherName column="fatherName" type="string"></property> 
+	<property name="organization" column="organization" type="string"></property> 
+	<property name="mobile" column="mobile" type="string"></property> 
+    </class> 
+</hibernate-mapping> 
