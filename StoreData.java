@@ -1,4 +1,4 @@
-package hibernate_example;
+package com.sameer.lab_07;
 
 import java.util.Scanner;
 
@@ -21,7 +21,10 @@ public class StoreData {
 
 		// creating configuration object
 		Configuration cfg = new Configuration();
+		cfg.addAnnotatedClass(Person.class);
+
 		cfg.configure("hibernate.cfg.xml");// populates the configuration file
+
 		// creating session factory object
 		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(cfg.getProperties())
 				.build();
@@ -30,6 +33,7 @@ public class StoreData {
 		Session session = factory.openSession();
 		// creating transaction object
 		Transaction t = session.beginTransaction();
+
 		Person e1 = new Person();
 
 		System.out.println("Press 1 to add, 2 to delete, 3 to update and 4 to show result");
@@ -118,7 +122,9 @@ public class StoreData {
 
 		// creating configuration object
 		Configuration cfg = new Configuration();
-		cfg.configure("hibernate.cfg.xml");// populates the configuration file
+		cfg.addAnnotatedClass(Person.class);
+
+		cfg.configure("hibernate.cfg.xml");// populates the configuration fil
 		// creating session factory object
 		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(cfg.getProperties())
 				.build();

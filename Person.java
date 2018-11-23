@@ -1,8 +1,18 @@
-package hibernate_example;
+package com.sameer.lab_07;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "person")
 public class Person {
+	@Id
 	private int id;
 	private String name, fatherName, organization, mobile;
+	Person() {
+
+	}
 
 	public String getName() {
 		return name;
